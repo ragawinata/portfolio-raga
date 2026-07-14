@@ -98,12 +98,8 @@ Desain Grafis.
 
 <div class="photo-ring" aria-hidden="true"></div>
 
-<!-- Responsive picture: prefer optimized WebP/JPG assets when available; fallback to image.png in repo root -->
-<picture>
-  <source type="image/webp" srcset="assets/profile-400.webp 400w, assets/profile-800.webp 800w" sizes="(max-width:480px) 160px, (max-width:960px) 240px, 280px">
-  <source type="image/jpeg" srcset="assets/profile-400.jpg 400w, assets/profile-800.jpg 800w" sizes="(max-width:480px) 160px, (max-width:960px) 240px, 280px">
-  <img src="image.png" alt="Foto Raga Winata" id="profileImg" loading="lazy" width="600" height="800">
-</picture>
+<!-- Immediate fix: use absolute path to image.png so GitHub Pages finds it reliably -->
+<img src="/portfolio-raga/image.png" alt="Foto Raga Winata" id="profileImg" loading="lazy" width="600" height="800">
 
 </div>
 
