@@ -203,11 +203,11 @@ position:relative;
 
 padding:90px 20px;
 
-background-image:linear-gradient(135deg, rgba(14,37,71,0.65) 0%, rgba(75,86,112,0.65) 100%), url('/portfolio-raga/image.png');
+background-image:linear-gradient(135deg, rgba(14,37,71,0.65) 0%, rgba(75,86,112,0.65) 100%), url('/portfolio-raga/profile-bg.jpg');
 
 background-size:cover;
 
-background-position:center right;
+background-position:center;
 
 background-attachment:fixed;
 
@@ -998,9 +998,9 @@ gap:6px;
 
 transform:translateY(-130%);
 
-opacity:0;
+visibility:hidden;
 
-transition:transform .35s ease, opacity .3s ease;
+transition:transform .3s ease, visibility .3s ease;
 
 }
 
@@ -1008,45 +1008,98 @@ nav ul.open{
 
 transform:translateY(0);
 
-opacity:1;
+visibility:visible;
 
 }
 
-nav a{
+.nav-toggle{
 
-display:block;
-
-padding:14px 0;
-
-border-bottom:1px solid rgba(255,255,255,.08);
+display:flex;
 
 }
 
-.nav-toggle{display:flex;}
+.hero-photo{
 
-.hero-text h1{font-size:48px;}
+width:200px;
 
-.contact-grid{grid-template-columns:1fr;}
+height:200px;
 
-section{padding:70px 20px;}
+}
 
-section h2{font-size:30px;}
+.hero-photo img{
+
+width:180px;
+
+height:180px;
+
+}
+
+.hero-text h1{
+
+font-size:48px;
+
+}
+
+.hero-actions{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+section h2{
+
+font-size:28px;
+
+}
+
+.skills-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
 
 }
 
 @media (max-width:480px){
 
-.hero{padding:60px 16px;}
+.hero-text h1{
 
-.hero-photo{width:190px;height:190px;}
+font-size:36px;
 
-.hero-photo img,
-.photo-fallback{width:160px;height:160px;}
+}
 
-.hero-stats{gap:26px;}
+.hero-stats{
 
-.btn{padding:13px 24px;font-size:14px;}
+gap:20px;
 
-.hero-text h1{font-size:42px;}
+}
+
+.stat-num{
+
+font-size:28px;
+
+}
+
+section{
+
+padding:60px 20px;
+
+}
 
 }
