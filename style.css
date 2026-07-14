@@ -203,15 +203,19 @@ position:relative;
 
 padding:90px 20px;
 
-background-image:url('/portfolio-raga/image.png'), linear-gradient(135deg, rgba(14,37,71,0.75) 0%, rgba(75,86,112,0.75) 100%);
+background-image:linear-gradient(135deg, rgba(14,37,71,0.65) 0%, rgba(75,86,112,0.65) 100%), url('/portfolio-raga/image.png');
 
 background-size:cover;
 
-background-position:center;
+background-position:center right;
 
 background-attachment:fixed;
 
-background-blend-mode:overlay;
+min-height:600px;
+
+display:flex;
+
+align-items:center;
 
 }
 
@@ -229,6 +233,8 @@ max-width:1200px;
 
 margin:auto;
 
+width:100%;
+
 }
 
 .eyebrow{
@@ -237,7 +243,7 @@ font-family:var(--font-mono);
 
 font-size:14px;
 
-color:var(--signal);
+color:#a0d8ff;
 
 margin-bottom:14px;
 
@@ -249,6 +255,7 @@ letter-spacing:.02em;
 color:#fff;
 position:relative;
 z-index:2;
+flex:1;
 }
 
 .hero-text h1{
@@ -261,7 +268,7 @@ color:#fff;
 
 margin-bottom:10px;
 
-text-shadow:0 4px 12px rgba(0,0,0,0.3);
+text-shadow:0 4px 12px rgba(0,0,0,0.4);
 
 }
 
@@ -277,7 +284,7 @@ font-weight:500;
 
 color:var(--amber);
 
-background:rgba(14,37,71,0.85);
+background:rgba(14,37,71,0.9);
 
 letter-spacing:.04em;
 
@@ -289,17 +296,23 @@ margin-bottom:26px;
 
 backdrop-filter:blur(10px);
 
+box-shadow:0 8px 32px rgba(0,0,0,0.2);
+
 }
 
 .hero-desc{
 
 max-width:460px;
 
-color:#dfe4ee;
+color:#e8eef5;
 
 margin-bottom:34px;
 
-text-shadow:0 2px 8px rgba(0,0,0,0.2);
+text-shadow:0 2px 8px rgba(0,0,0,0.3);
+
+font-size:16px;
+
+line-height:1.7;
 
 }
 
@@ -325,7 +338,7 @@ font-weight:700;
 
 color:#fff;
 
-text-shadow:0 2px 8px rgba(0,0,0,0.3);
+text-shadow:0 2px 8px rgba(0,0,0,0.4);
 
 }
 
@@ -333,7 +346,7 @@ text-shadow:0 2px 8px rgba(0,0,0,0.3);
 
 font-size:13px;
 
-color:#dfe4ee;
+color:#d0dce8;
 
 line-height:1.35;
 
@@ -468,6 +481,10 @@ font-size:15px;
 
 transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
 
+cursor:pointer;
+
+border:none;
+
 }
 
 .btn-primary{
@@ -475,6 +492,8 @@ transition:transform .25s ease, box-shadow .25s ease, background .25s ease, colo
 background:var(--amber);
 
 color:var(--ink);
+
+box-shadow:0 8px 24px rgba(245,176,0,0.3);
 
 }
 
@@ -486,17 +505,17 @@ color:var(--ink);
 
 transform:translateY(-3px);
 
-box-shadow:0 12px 24px rgba(0,0,0,0.3);
+box-shadow:0 12px 32px rgba(0,0,0,0.3);
 
 }
 
 .btn-ghost{
 
-background:rgba(255,255,255,0.2);
+background:rgba(255,255,255,0.15);
 
 color:#fff;
 
-border:2px solid #fff;
+border:2px solid rgba(255,255,255,0.6);
 
 backdrop-filter:blur(10px);
 
@@ -504,13 +523,15 @@ backdrop-filter:blur(10px);
 
 .btn-ghost:hover{
 
-background:#fff;
+background:rgba(255,255,255,0.25);
 
-color:var(--ink);
+color:#fff;
+
+border-color:#fff;
 
 transform:translateY(-3px);
 
-border-color:#fff;
+box-shadow:0 12px 32px rgba(0,0,0,0.2);
 
 }
 
@@ -949,6 +970,10 @@ gap:50px;
 
 .eyebrow{display:block;}
 
+.hero{
+min-height:auto;
+}
+
 }
 
 @media (max-width:768px){
@@ -1021,5 +1046,7 @@ section h2{font-size:30px;}
 .hero-stats{gap:26px;}
 
 .btn{padding:13px 24px;font-size:14px;}
+
+.hero-text h1{font-size:42px;}
 
 }
