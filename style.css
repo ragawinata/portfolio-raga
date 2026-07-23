@@ -1000,4 +1000,79 @@ transform:translateY(-130%);
 
 }
 
-/* ...rest of file unchanged ... */
+/* show hamburger on smaller screens so JS toggle works */
+.nav-toggle{display:flex;}
+
+/* STACK CONTACT CARDS */
+.contact-grid{
+  grid-template-columns: 1fr;
+  padding: 0 20px;
+}
+
+.contact-item{
+  padding:14px;
+  align-items:center;
+}
+
+.contact-item i{
+  margin-right:14px;
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+}
+
+/* avoid breaking words into single characters on small screens */
+.contact-item span{
+  word-break:normal;
+  overflow-wrap:break-word;
+  white-space:normal;
+  text-align:left;
+}
+
+/* make hero behave better on small screens */
+.hero{
+  background-position:center center;
+  background-attachment:scroll;
+  padding:60px 16px;
+  min-height:520px;
+}
+
+.hero-inner{
+  gap:30px;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-photo{
+  order:2;
+  width:220px;
+  height:220px;
+}
+
+.hero-photo img{
+  width:180px;
+  height:180px;
+}
+
+.hero-text{ order:1; }
+
+.btn{ padding:12px 20px; }
+
+section:not(.hero){ padding:60px 16px; }
+
+.logo{ font-size:20px; }
+
+}
+
+@media (max-width:420px){
+  .contact-item{ padding:12px; border-radius:12px; }
+  .hero-text h1{ font-size:40px; }
+  .hero-text h2{ font-size:12px; padding:6px 12px; }
+  .nav a{ font-size:14px; }
+}
+
+/* small-desktop tweak to center hero image better */
+@media (min-width:961px) and (max-width:1366px){
+  .hero{ background-position:center right; }
+}
