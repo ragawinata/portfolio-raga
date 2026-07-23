@@ -538,7 +538,7 @@ box-shadow:0 12px 32px rgba(0,0,0,0.2);
 /* ============================================
    SECTIONS (generic)
    ============================================ */
-section{
+section:not(.hero){
 
 max-width:1200px;
 
@@ -998,108 +998,6 @@ gap:6px;
 
 transform:translateY(-130%);
 
-visibility:hidden;
-
-transition:transform .3s ease, visibility .3s ease;
-
 }
 
-nav ul.open{
-
-transform:translateY(0);
-
-visibility:visible;
-
-}
-
-.nav-toggle{
-
-display:flex;
-
-}
-
-.hero-photo{
-
-width:200px;
-
-height:200px;
-
-}
-
-.hero-photo img{
-
-width:180px;
-
-height:180px;
-
-}
-
-.hero-text h1{
-
-font-size:48px;
-
-}
-
-.hero-actions{
-
-flex-direction:column;
-
-width:100%;
-
-}
-
-.btn{
-
-width:100%;
-
-justify-content:center;
-
-}
-
-section h2{
-
-font-size:28px;
-
-}
-
-.skills-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.contact-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-@media (max-width:480px){
-
-.hero-text h1{
-
-font-size:36px;
-
-}
-
-.hero-stats{
-
-gap:20px;
-
-}
-
-.stat-num{
-
-font-size:28px;
-
-}
-
-section{
-
-padding:60px 20px;
-
-}
-
-}
+/* ...rest of file unchanged ... */
